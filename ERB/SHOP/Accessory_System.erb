@@ -19,21 +19,21 @@ PRINTL
 PRINTFORML 要买什么呢？　(金钱：%MONEY_C(MONEY)%)
 SIF NUM("未鑑定のアクセサリ")
 	PRINTFORML 还是说你想要鉴定饰品？（饰品鉴定收费：$100/次）
-PRINTFORML  [ 0] %TEXT_LJ("朦胧手镯", 20)% 精神力重视（$2,000）\@ ITEM:朦胧手镯 ? 未鉴定：{ITEM:朦胧手镯, 2}个 # \@
-PRINTFORML  [ 1] %TEXT_LJ("朦胧袖饰", 20)% 魅力重视　（$2,000）\@ ITEM:朦胧袖饰 ? 未鉴定：{ITEM:朦胧袖饰, 2}个 # \@
-PRINTFORML  [ 2] %TEXT_LJ("朦胧手套", 20)% 技巧重视　（$2,000）\@ ITEM:朦胧手套 ? 未鉴定：{ITEM:朦胧手套, 2}个 # \@
-PRINTFORML  [ 3] %TEXT_LJ("朦胧绶带", 20)% 精力重视　（$2,000）\@ ITEM:朦胧绶带 ? 未鉴定：{ITEM:朦胧绶带, 2}个 # \@
-PRINTFORML  [ 4] %TEXT_LJ("朦胧指环", 20)% 效果数重视（$5,000）\@ ITEM:朦胧指环 ? 未鉴定：{ITEM:朦胧指环, 2}个 # \@
+PRINTFORML  [ 0] %TEXT_LJ_FIX("朦胧手镯", 20)% 精神力重视（$2,000）\@ ITEM:朦胧手镯 ? 未鉴定：{ITEM:朦胧手镯, 2}个 # \@
+PRINTFORML  [ 1] %TEXT_LJ_FIX("朦胧袖饰", 20)% 魅力重视　（$2,000）\@ ITEM:朦胧袖饰 ? 未鉴定：{ITEM:朦胧袖饰, 2}个 # \@
+PRINTFORML  [ 2] %TEXT_LJ_FIX("朦胧手套", 20)% 技巧重视　（$2,000）\@ ITEM:朦胧手套 ? 未鉴定：{ITEM:朦胧手套, 2}个 # \@
+PRINTFORML  [ 3] %TEXT_LJ_FIX("朦胧绶带", 20)% 精力重视　（$2,000）\@ ITEM:朦胧绶带 ? 未鉴定：{ITEM:朦胧绶带, 2}个 # \@
+PRINTFORML  [ 4] %TEXT_LJ_FIX("朦胧指环", 20)% 效果数重视（$5,000）\@ ITEM:朦胧指环 ? 未鉴定：{ITEM:朦胧指环, 2}个 # \@
 SIF ITEM:朦胧宝石
-	PRINTFORML  [ 5] %TEXT_LJ("朦胧宝石", 20)% 　　　　　　　　　　\@ ITEM:朦胧宝石 ? 未鉴定：{ITEM:朦胧宝石, 2}个 # \@
+	PRINTFORML  [ 5] %TEXT_LJ_FIX("朦胧宝石", 20)% 　　　　　　　　　　\@ ITEM:朦胧宝石 ? 未鉴定：{ITEM:朦胧宝石, 2}个 # \@
 
-PRINTFORML  [10] %TEXT_LJ("定做饰品", 20)% 　　　　　（$5,000～）
+PRINTFORML  [10] %TEXT_LJ_FIX("定做饰品", 20)% 　　　　　（$5,000～）
 IF NUM("所持アクセサリ")
-	PRINTFORML  [20] %TEXT_LJ("购买砥砺思维之石", 20)% ＬＶＵＰ！（$5,000）
-	PRINTFORML  [\@ ITEM:砥砺思维之石 ? 80 # × \@] %TEXT_LJ("使用砥砺思维之石", 20)%（{ITEM:砥砺思维之石, 2}个）
-	PRINTFORML  [\@ ITEM:灼烧思考之炎 ? 81 # × \@] %TEXT_LJ("使用灼烧思考之炎", 20)%（{ITEM:灼烧思考之炎, 2}个）
-	PRINTFORML  [\@ ITEM:纹白蝶 && NUM("所持アクセサリ") >= 2 ? 82 # × \@] %TEXT_LJ("使用纹白蝶", 20)%（{ITEM:纹白蝶, 2}只）
-	PRINTFORML  [90] %TEXT_LJ("装备饰品", 20)%（在查看MASTER能力时，也可以装卸/替换饰品）
+	PRINTFORML  [20] %TEXT_LJ_FIX("购买砥砺思维之石", 20)% ＬＶＵＰ！（$5,000）
+	PRINTFORML  [\@ ITEM:砥砺思维之石 ? 80 # × \@] %TEXT_LJ_FIX("使用砥砺思维之石", 20)%（{ITEM:砥砺思维之石, 2}个）
+	PRINTFORML  [\@ ITEM:灼烧思考之炎 ? 81 # × \@] %TEXT_LJ_FIX("使用灼烧思考之炎", 20)%（{ITEM:灼烧思考之炎, 2}个）
+	PRINTFORML  [\@ ITEM:纹白蝶 && NUM("所持アクセサリ") >= 2 ? 82 # × \@] %TEXT_LJ_FIX("使用纹白蝶", 20)%（{ITEM:纹白蝶, 2}只）
+	PRINTFORML  [90] %TEXT_LJ_FIX("装备饰品", 20)%（在查看MASTER能力时，也可以装卸/替换饰品）
 ENDIF
 PRINTFORML [100] 离开店铺
 
