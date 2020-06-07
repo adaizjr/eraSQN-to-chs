@@ -67,6 +67,7 @@
 @MONEY_C|[所在文件]()|[说明文件](/Wiki/erasqn_wiki/function/m/money_c.md)|||
 @NAME_CONVERT|[所在文件]()|[说明文件](/Wiki/erasqn_wiki/function/n/name_convert.md)|||
 @NEW_PRINT_3SIZE|[所在文件](/ERB/SHOP/New_Print_State.erb#L1285-L1358)|[说明文件](/Wiki/erasqn_wiki/function/n/new_print_3size.md)|根据传入的参数，以不同的方式打印角色的三围|100%|
+@NEW_PRINT_JUEL|[所在文件](/ERB/SHOP/New_Print_State.erb#L1440-L1500)|[说明文件](/Wiki/erasqn_wiki/function/n/new_print_juel.md)|显示角色拥有的宝珠|100%|
 @NEW_PRINT_STATE|[所在文件](/ERB/SHOP/New_Print_State.erb#L2-L499)|[说明文件](/Wiki/erasqn_wiki/function/n/new_print_state.md)|输出角色详情信息|98%|暂时未找到信息区折叠是如何改变`RESULTS`的
 @NEW_PRINT_ZOKUSEI|[所在文件](/ERB/SHOP/New_Print_State.erb#L1361-L1437)|[说明文件](/Wiki/erasqn_wiki/function/n/new_print_zokusei.md)|根据传入的参数，以不同的格式输出角色的性癖、弱点、以及属性信息|100%|
 @NUM|[所在文件]()|[说明文件](/Wiki/erasqn_wiki/function/n/num.md)|||
