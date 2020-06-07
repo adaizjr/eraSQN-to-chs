@@ -1539,7 +1539,7 @@ LOCALS += "　　　　输尿经验/　　　　唱歌经验/　　　Ｖ损伤�
 SPLIT LOCALS, "/", LOCALS
 
 ;一手間多いが上の表の見やすさのためにあえてめんどい事をやる
-FOR LCOUNT, 0, 100
+FOR LCOUNT, 0, 68
 	FOR LCOUNT2, 0, 7
 		SIF SUBSTRING(LOCALS:LCOUNT, 0, 2) != "　"
 			BREAK
@@ -1555,7 +1555,7 @@ FOR LCOUNT, 0, 100
 		BREAK
 	ELSEIF EXP:ARG:LOCAL >= 1
 		IF STRLENS_FIX(EXPNAME:LOCAL) >= 14
-			PRINTFORM %TEXT_RJ_FIX(SUBSTRING(EXPNAME:LOCAL, 0, STRLENS(EXPNAME:LOCAL) - 4), 13)%:
+			PRINTFORM %TEXT_RJ_FIX(SUBSTRING(EXPNAME:LOCAL, 0, STRLENS_FIX(EXPNAME:LOCAL) - 4), 13)%:
 		ELSE
 			PRINTFORM %TEXT_RJ_FIX(EXPNAME:LOCAL, 13)%:
 		ENDIF
