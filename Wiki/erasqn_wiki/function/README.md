@@ -68,6 +68,7 @@
 @NAME_CONVERT|[所在文件]()|[说明文件](/Wiki/erasqn_wiki/function/n/name_convert.md)|||
 @NEW_PRINT_3SIZE|[所在文件](/ERB/SHOP/New_Print_State.erb#L1285-L1358)|[说明文件](/Wiki/erasqn_wiki/function/n/new_print_3size.md)|根据传入的参数，以不同的方式打印角色的三围|100%|
 @NEW_PRINT_STATE|[所在文件](/ERB/SHOP/New_Print_State.erb#L2-L499)|[说明文件](/Wiki/erasqn_wiki/function/n/new_print_state.md)|输出角色详情信息|98%|暂时未找到信息区折叠是如何改变`RESULTS`的
+@NEW_PRINT_ZOKUSEI|[所在文件](/ERB/SHOP/New_Print_State.erb#L1361-L1437)|[说明文件](/Wiki/erasqn_wiki/function/n/new_print_zokusei.md)|根据传入的参数，以不同的格式输出角色的性癖、弱点、以及属性信息|100%|
 @NUM|[所在文件]()|[说明文件](/Wiki/erasqn_wiki/function/n/num.md)|||
 @PLAY_WITH_ASSI|[所在文件]()|[说明文件](/Wiki/erasqn_wiki/function/p/play_with_assi.md)|||
 @PROFILE|[所在文件](/ERB/SHOP/Shop3.erb#L418-L890)|[说明文件](/Wiki/erasqn_wiki/function/p/profile.md)|设置角色详情|95%|还有`@MEMO_FAVORITE_DRESS`没看懂，<br/>以后看到再更新
