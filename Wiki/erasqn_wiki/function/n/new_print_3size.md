@@ -14,9 +14,9 @@
 
 **被调用**：
 
-+ `@NEW_PRINT_STATE`<sup>[说明文件](/Wiki/erasqn_wiki/function/func_template.md)</sup>
++ `@NEW_PRINT_STATE`<sup>[说明文件](/Wiki/erasqn_wiki/function/n/new_print_state.md)</sup>
 
-+ `@PRINT_NUM_NAME`<sup>[说明文件](/Wiki/erasqn_wiki/function/func_template.md)</sup>
++ `@PRINT_NUM_NAME`<sup>[说明文件](/Wiki/erasqn_wiki/function/p/print_num_name.md)</sup>
 
 **调用**：
 

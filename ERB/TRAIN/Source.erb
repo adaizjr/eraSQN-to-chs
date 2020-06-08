@@ -1693,14 +1693,20 @@ IF TALENT:ARG:Ａ处女 && COND("Ａ処女喪失フラグ", ARG) + EXP_GAIN(13, 
 	TALENT:ARG:Ａ处女 = 0
 	LOCAL:50 += 1
 	SETBIT CFLAG:ARG:11, 32
-	;アナルセックスを先に経験
-	IF TALENT:ARG:处女 == 1 && EXP:ARG:Ｖ性交经验 == 0 && GETBIT(CFLAG:ARG:11, 30) == 0
+	;アナルセックスを先に経験 原写法是`TALENT:ARG:处女==1`
+	IF TALENT:ARG:处女 && EXP:ARG:Ｖ性交经验 == 0 && GETBIT(CFLAG:ARG:11, 30) == 0
 		LOCAL:50 += 1
 		SETBIT CFLAG:ARG:11, 30
 	ENDIF
-	;アナルセックスを先に経験 その２
-	IF (TALENT:ARG:男性 || TALENT:ARG:扶她 == 1) && TALENT:ARG:童贞 && GETBIT(CFLAG:ARG:11, 31) == 0
+	;アナルセックスを先に経験 その２ 原写法是`TALENT:ARG:男性 || TALENT:ARG:扶她 == 1`
+	IF (TALENT:ARG:男性 || TALENT:ARG:扶她) && TALENT:ARG:童贞 && GETBIT(CFLAG:ARG:11, 31) == 0
 		LOCAL:50 += 1
+		SETBIT CFLAG:ARG:11, 31
+	ENDIF
+	; 这里少了处理扶她的flag，会导致显示状态信息是异常经验不能正常显示，在这里加上以下5行修复此BUG，条件`(CFLAG:ARG:11, 31) == 0`是否需要还要考察
+	IF TALENT:ARG:扶她 && TALENT:ARG:童贞 && (EXP:ARG:Ｖ性交经验 == 0)
+		LOCAL:50 += 1 && (GETBIT(CFLAG:ARG:11, 31)||GETBIT(CFLAG:ARG:11, 30))==0
+		SETBIT CFLAG:ARG:11, 30
 		SETBIT CFLAG:ARG:11, 31
 	ENDIF
 	PRINTFORM ＜異常経験：
