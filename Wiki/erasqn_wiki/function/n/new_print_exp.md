@@ -14,7 +14,7 @@
 
 **被调用**：
 
-+ `@NEW_PRINT_STATE`<sup>[说明文件](/Wiki/erasqn_wiki/function/n/new_print_.md)</sup>
++ `@NEW_PRINT_STATE`<sup>[说明文件](/Wiki/erasqn_wiki/function/n/new_print_state.md)</sup>
 
 **调用**：
 
@@ -56,7 +56,7 @@
 
 **L1511-L1512**：
 
-当`@CONFIG("項目：宝珠")`的返回值不为`0`时：
+当`@CONFIG("項目：经验")`的返回值不为`0`时：
 
   + 返回`0`
 

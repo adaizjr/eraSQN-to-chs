@@ -67,6 +67,7 @@
 @MONEY_C|[所在文件]()|[说明文件](/Wiki/erasqn_wiki/function/m/money_c.md)|||
 @NAME_CONVERT|[所在文件]()|[说明文件](/Wiki/erasqn_wiki/function/n/name_convert.md)|||
 @NEW_PRINT_3SIZE|[所在文件](/ERB/SHOP/New_Print_State.erb#L1285-L1358)|[说明文件](/Wiki/erasqn_wiki/function/n/new_print_3size.md)|根据传入的参数，以不同的方式打印角色的三围|100%|
+@NEW_PRINT_ABL|[所在文件](/ERB/SHOP/New_Print_State.erb#L1742-L1929)|[说明文件](/Wiki/erasqn_wiki/function/n/new_print_abl.md)|显示角色拥有的能力|100%|
 @NEW_PRINT_EXP|[所在文件](/ERB/SHOP/New_Print_State.erb#L1503-L1591)|[说明文件](/Wiki/erasqn_wiki/function/n/new_print_exp.md)|显示角色拥有的经验值|100%|
 @NEW_PRINT_EXP50|[所在文件](/ERB/SHOP/New_Print_State.erb#L1503-L1591)|[说明文件](/Wiki/erasqn_wiki/function/n/new_print_exp.md)|显示角色经历的异常验值|100%|
 @NEW_PRINT_JUEL|[所在文件](/ERB/SHOP/New_Print_State.erb#L1440-L1500)|[说明文件](/Wiki/erasqn_wiki/function/n/new_print_juel.md)|显示角色拥有的宝珠|100%|
