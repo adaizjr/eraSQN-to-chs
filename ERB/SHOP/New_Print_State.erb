@@ -1022,9 +1022,9 @@ PRINTFORML 　　総作品数：{CFLAG:ARG:60, 2}本　歴代最高価格：%MON
 SIF CFLAG:ARG:368 == 0
 	RETURN 0
 IF ARG == MASTER
-	CALL DRAWLINES, "□ 仪容 □", "仪容"
+	CALL DRAWLINES, "□ 仪表 □", "仪表"
 ELSE
-	CALL DRAWLINES, "□ 仪容指示 □", "仪容指示"
+	CALL DRAWLINES, "□ 仪表指示 □", "仪表指示"
 ENDIF
 
 SIF CONFIG("項目：身嗜み")
@@ -1032,92 +1032,92 @@ SIF CONFIG("項目：身嗜み")
 
 SELECTCASE COND("身嗜み：陰毛", ARG)
 CASE 3
-	PRINTFORML ・陰毛を常にツルツルに保つ
+	PRINTFORML ・始终保持阴毛光秃秃
 CASE 5
-	PRINTFORML ・陰毛を常に整える
+	PRINTFORML ・经常修剪阴毛
 CASE 7
-	PRINTFORML ・陰毛を剃らない
+	PRINTFORML ・不剃阴毛
 ENDSELECT
 
 SELECTCASE COND("身嗜み：腋毛", ARG)
 CASE 3
-	PRINTFORML ・%TEXTS("腋")%毛を常にツルツルに保つ
+	PRINTFORML ・始终保持%TEXTS("腋")%毛光秃秃
 CASE 7
-	PRINTFORML ・%TEXTS("腋")%毛を剃らない
+	PRINTFORML ・不剃%TEXTS("腋")%毛
 ENDSELECT
 
 SELECTCASE COND("身嗜み：Ｖ拡張", ARG)
 CASE 1
-	PRINTFORML ・膣に常にバイブを挿入
+	PRINTFORML ・膣内时常插入按摩棒
 CASE 2
-	PRINTFORML ・膣に常に大きめのバイブを挿入
+	PRINTFORML ・膣内时常插入大型按摩棒
 CASE 3
-	PRINTFORML ・膣に常に極太サイズのバイブを挿入
+	PRINTFORML ・膣内时常插入极大型按摩棒
 CASE 4
-	PRINTFORML ・膣に常にバルーン型のバイブを挿入
+	PRINTFORML ・膣内时常插入气囊型按摩棒
 ENDSELECT
 
 SELECTCASE COND("身嗜み：Ａ拡張", ARG)
 CASE 1
-	PRINTFORML ・アナルに常にアナルプラグを挿入
+	PRINTFORML ・肛内时常插入肛塞
 CASE 2
-	PRINTFORML ・アナルに常に大きめのアナルプラグを挿入
+	PRINTFORML ・肛内时常插入大型肛塞
 CASE 3
-	PRINTFORML ・アナルに常に極太サイズのアナルプラグを挿入
+	PRINTFORML ・肛内时常插入极大型肛塞
 CASE 4
-	PRINTFORML ・アナルに常にバルーン型のアナルプラグを挿入
+	PRINTFORML ・肛内时常插入气囊型肛塞
 ENDSELECT
 
 SELECTCASE COND("身嗜み：Ａ準備", ARG)
 CASE 1
-	PRINTFORML ・調教前に腸内を綺麗にする
+	PRINTFORML ・调教前清理肠道
 CASE 2
-	PRINTFORML ・調教前にアナルにローションを馴染ませる
+	PRINTFORML ・调教前在肛门上好润滑液
 CASE 3
-	PRINTFORML ・調教前に腸内洗浄＆ローション準備
+	PRINTFORML ・调教前清理肠道＆上好润滑液
 ENDSELECT
 
 SELECTCASE COND("身嗜み：Ｐ準備", ARG)
 CASE 1
-	PRINTFORML ・ペニスの恥垢はそのままにしておく
+	PRINTFORML ・放着阴茎的耻垢不用管
 ENDSELECT
 
 SELECTCASE COND("身嗜み：Ｖ準備", ARG)
 CASE 1
-	PRINTFORML ・調教前の入浴は控える
+	PRINTFORML ・调教前不可入浴
 ENDSELECT
 
 SELECTCASE COND("身嗜み：服装", ARG)
 CASE 1
-	PRINTFORML ・パンツは穿かない
+	PRINTFORML ・禁止穿胖次
 ENDSELECT
 
 SELECTCASE COND("身嗜み：尿道拡張", ARG)
 CASE 1
-	PRINTFORML ・尿道に常にビーズ型のブジーを挿入
+	PRINTFORML ・尿道时常插入扩张棒
 ENDSELECT
 
 SELECTCASE COND("身嗜み：性行為の制限", ARG)
 CASE 1
-	PRINTFORML ・前の穴を使っての性行為は%CALLNAME:MASTER%とだけ
+	PRINTFORML ・除了%CALLNAME:MASTER%以外，禁止与别人发生前穴性行为
 CASE 2
-	PRINTFORML ・アナルを使っての性行為は%CALLNAME:MASTER%とだけ
+	PRINTFORML ・除了%CALLNAME:MASTER%以外，禁止与别人发生肛门性行为
 CASE 3
-	PRINTFORML ・口を使っての奉仕は%CALLNAME:MASTER%にだけ
+	PRINTFORML ・除了%CALLNAME:MASTER%以外，禁止用口侍奉别的人
 CASE 4
-	PRINTFORML ・キスは%CALLNAME:MASTER%とだけ
+	PRINTFORML ・除了%CALLNAME:MASTER%以外，禁止与别的人亲吻
 CASE 5
-	PRINTFORML ・ペニスを使っての性行為は%CALLNAME:MASTER%とだけ
+	PRINTFORML ・除了%CALLNAME:MASTER%以外，禁止用阴茎与别人发生性行为
 CASE 100
-	PRINTFORML ・%CALLNAME:ARG%は%CALLNAME:MASTER%のもの
+	PRINTFORML ・%CALLNAME:ARG%是%CALLNAME:MASTER%的所有物
 CASE IS > 0
 	VARSET LOCALS
-	LOCALS = %LOCALS%\@ COND("身嗜み：Ｖ独占", ARG) ? アソコと # \@
-	LOCALS = %LOCALS%\@ COND("身嗜み：Ａ独占", ARG) ? アナルと # \@
-	LOCALS = %LOCALS%\@ COND("身嗜み：口独占", ARG) ? 口での奉仕と # \@
-	LOCALS = %LOCALS%\@ COND("身嗜み：キス独占", ARG) ? キスと # \@
-	LOCALS = %LOCALS%\@ COND("身嗜み：Ｐ独占", ARG) ? 肉棒と # \@
-	PRINTFORML ・%SUBSTRING(LOCALS, 0, STRLENS(LOCALS) - 2)%を用いた行為は%CALLNAME:MASTER%とだけ
+	LOCALS = %LOCALS%\@ COND("身嗜み：Ｖ独占", ARG) ? 阴部和 # \@
+	LOCALS = %LOCALS%\@ COND("身嗜み：Ａ独占", ARG) ? 肛门和 # \@
+	LOCALS = %LOCALS%\@ COND("身嗜み：口独占", ARG) ? 口的侍奉和 # \@
+	LOCALS = %LOCALS%\@ COND("身嗜み：キス独占", ARG) ? 亲吻和 # \@
+	LOCALS = %LOCALS%\@ COND("身嗜み：Ｐ独占", ARG) ? 肉棒和 # \@
+	PRINTFORML ・除了%CALLNAME:MASTER%以外，不能与别人发生%SUBSTRING(LOCALS, 0, STRLENS(LOCALS) - 2)%性行为
 ENDSELECT
 
 ;SELECTCASE COND("身嗜み：Ｖ準備", ARG)
