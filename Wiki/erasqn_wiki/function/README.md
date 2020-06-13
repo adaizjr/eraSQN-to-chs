@@ -82,8 +82,10 @@
 @PRINT_ACCESSORY|[所在文件](/ERB/SHOP/Accessory_System.erb#L222-L272)|[说明文件](/Wiki/erasqn_wiki/function/p/print_accessory.md)|打印饰品的名称及特性|100%|
 @PRINT_ACCESSORY_NAME|[所在文件](/ERB/SHOP/Accessory_System.erb#L706-L760)|[说明文件](/Wiki/erasqn_wiki/function/p/print_accessory_name.md)|打印饰品的名称及特性|100%|
 @PRINT_BAR|[所在文件]()|[说明文件](/Wiki/erasqn_wiki/function/p/print_bar.md)|||
+@PRINT_COS|[所在文件](/ERB/SHOP/New_Print_State.erb#L1132-L1282)|[说明文件](/Wiki/erasqn_wiki/function/p/print_cos.md)|显示角色服装详细|100%|
 @PRINT_DRESS|[所在文件]()|[说明文件](/Wiki/erasqn_wiki/function/p/print_dress.md)|||
 @PRINT_EQUIPPING_ACCESSORY|[所在文件](/ERB/SHOP/New_Print_State.erb#L2473-L2484)|[说明文件](/Wiki/erasqn_wiki/function/p/print_equipping_accessory.md)|显示角色正在装备的饰品|100%|
+@PRINT_MIDASHINAMI|[所在文件](/ERB/SHOP/New_Print_State.erb#L1020-L1121)|[说明文件](/Wiki/erasqn_wiki/function/p/print_midashinami.md)|显示角色仪表指示|100%|
 @PRINT_PROFILE|[所在文件](/ERB/SHOP/Shop3.erb#L892-L996)|[说明文件](/Wiki/erasqn_wiki/function/p/print_profile.md)|||
 @PRINT_SAVEDATA|[所在文件](/ERB/Saveload.erb#L122-L142)|[说明文件](/Wiki/erasqn_wiki/function/p/print_savedata.md)|||
 @PRINT_STR|[所在文件]()|[说明文件](/Wiki/erasqn_wiki/function/p/print_str.md)|||

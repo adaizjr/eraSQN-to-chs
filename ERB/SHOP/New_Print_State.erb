@@ -1117,7 +1117,7 @@ CASE IS > 0
 	LOCALS = %LOCALS%\@ COND("身嗜み：口独占", ARG) ? 口的侍奉和 # \@
 	LOCALS = %LOCALS%\@ COND("身嗜み：キス独占", ARG) ? 亲吻和 # \@
 	LOCALS = %LOCALS%\@ COND("身嗜み：Ｐ独占", ARG) ? 肉棒和 # \@
-	PRINTFORML ・除了%CALLNAME:MASTER%以外，不能与别人发生%SUBSTRING(LOCALS, 0, STRLENS(LOCALS) - 2)%性行为
+	PRINTFORML ・除了%CALLNAME:MASTER%以外，禁止与别人发生%SUBSTRING(LOCALS, 0, STRLENS(LOCALS) - 2)%性行为
 ENDSELECT
 
 ;SELECTCASE COND("身嗜み：Ｖ準備", ARG)
@@ -1140,17 +1140,17 @@ SIF CONFIG("項目：服装詳細")
 	RETURN 0
 
 SIF EQUIP:ARG:上衣
-	PRINTFORML 　Ｅ：[%SHIRT(ARG)%\@ CHECK_SHIRT("スカート着用", ARG) && EQUIP:ARG:裙子 == 0 ? (スカートなし) # \@]
+	PRINTFORML 　Ｅ：[%SHIRT(ARG)%\@ CHECK_SHIRT("スカート着用", ARG) && EQUIP:ARG:裙子 == 0 ? (没穿裙子) # \@]
 IF EQUIP:ARG:连体衣
 	PRINTFORM 　Ｅ：[%BODYS(ARG)%
 	IF CHECK_BODYS("ファスナー", ARG)
-		PRINT (ファスナー付)
+		PRINT (拉链)
 	ELSEIF CHECK_BODYS("ＶＡ露出", ARG)
-		PRINT (穴開き)
+		PRINT (二穴露出)
 	ELSEIF CHECK_BODYS("Ａ露出", ARG)
-		PRINT (Ａ穴開き)
+		PRINT (Ａ穴露出)
 	ELSEIF CHECK_BODYS("Ｖ露出", ARG)
-		PRINT (Ｖ穴開き)
+		PRINT (Ｖ穴露出)
 	ENDIF
 	PRINTL ]
 ENDIF
@@ -1159,28 +1159,28 @@ SIF EQUIP:ARG:胸罩
 IF EQUIP:ARG:外套
 	PRINTFORM 　Ｅ：[%OUTER(ARG)%
 	IF CHECK_OUTER("ファスナー", ARG)
-		PRINT (ファスナー付)
+		PRINT (拉链)
 	ELSEIF CHECK_OUTER("スリット", ARG)
-		PRINT (スリット有り)
+		PRINT (开衩)
 	ELSEIF CHECK_OUTER("ＶＡ露出", ARG)
-		PRINT (穴開き)
+		PRINT (二穴露出)
 	ELSEIF CHECK_OUTER("Ａ露出", ARG)
-		PRINT (Ａ穴開き)
+		PRINT (Ａ穴露出)
 	ELSEIF CHECK_OUTER("Ｖ露出", ARG)
-		PRINT (Ｖ穴開き)
+		PRINT (Ｖ穴露出)
 	ENDIF
 	PRINTL ]
 ENDIF
 IF EQUIP:ARG:胖次
 	PRINTFORM 　Ｅ：[%PANTIES(ARG)%
 	IF CHECK_PANTIES("ファスナー", ARG)
-		PRINT (ファスナー付)
+		PRINT (拉链)
 	ELSEIF CHECK_PANTIES("ＶＡ露出", ARG)
-		PRINT (穴開き)
+		PRINT (二穴露出)
 	ELSEIF CHECK_PANTIES("Ａ露出", ARG)
-		PRINT (Ａ穴開き)
+		PRINT (Ａ穴露出)
 	ELSEIF CHECK_PANTIES("Ｖ露出", ARG)
-		PRINT (Ｖ穴開き)
+		PRINT (Ｖ穴露出)
 	ENDIF
 	PRINTL ]
 ENDIF
@@ -1198,7 +1198,7 @@ IF EQUIP:ARG:配饰
 	NEXT
 ENDIF
 IF TALENT:ARG:阴蒂穿环
-	PRINTFORM 　Ｅ：[\@ PENIS(TARGET) ? ペニ # クリ \@ピアス
+	PRINTFORM 　Ｅ：[\@ PENIS(TARGET) ? 阴茎 # 阴蒂 \@穿环
 	IF CEVENTS("クリピアス", ARG) != ""
 		SETCOLOR DEF_COLOR("黄色")
 		PRINTFORM (%CEVENTS("クリピアス", ARG)%)
@@ -1207,7 +1207,7 @@ IF TALENT:ARG:阴蒂穿环
 	PRINTFORML ]
 ENDIF
 IF TALENT:ARG:阴唇穿环
-	PRINTFORM 　Ｅ：[ラビアピアス
+	PRINTFORM 　Ｅ：[阴唇穿环
 	IF CEVENTS("ラビアピアス", ARG) != ""
 		SETCOLOR DEF_COLOR("黄色")
 		PRINTFORM (%CEVENTS("ラビアピアス", ARG)%)
@@ -1216,7 +1216,7 @@ IF TALENT:ARG:阴唇穿环
 	PRINTFORML ]
 ENDIF
 IF TALENT:ARG:乳头穿环
-	PRINTFORM 　Ｅ：[ニプルピアス
+	PRINTFORM 　Ｅ：[乳头穿环
 	IF CEVENTS("ニプルピアス", ARG) != ""
 		SETCOLOR DEF_COLOR("黄色")
 		PRINTFORM (%CEVENTS("ニプルピアス", ARG)%)
@@ -1225,7 +1225,7 @@ IF TALENT:ARG:乳头穿环
 	PRINTFORML ]
 ENDIF
 IF TALENT:ARG:肚脐穿环
-	PRINTFORM 　Ｅ：[へそピアス
+	PRINTFORM 　Ｅ：[肚脐穿环
 	IF CEVENTS("へそピアス", ARG) != ""
 		SETCOLOR DEF_COLOR("黄色")
 		PRINTFORM (%CEVENTS("へそピアス", ARG)%)
@@ -1261,7 +1261,7 @@ ENDIF
 
 LOCALS =
 IF CHECK_CLO("ハダカ", ARG)
-	LOCALS = ハダカ
+	LOCALS = 全裸
 ELSE
 	IF CHECK_CLO("ボトムレス", ARG)
 		LOCALS = 下半身露出
@@ -1269,17 +1269,17 @@ ELSE
 		IF TALENT:ARG:男性
 			LOCALS = 上半身露出
 		ELSE
- 			LOCALS = おっぱい露出
+ 			LOCALS = 胸部露出
 		ENDIF
 	ELSEIF CHECK_CLO("Ｖ露出", ARG) && CHECK_CLO("Ａ露出", ARG) && CHECK_CLO("乳首露出", ARG)
-		LOCALS = 大事な場所だけ露出
+		LOCALS = 重要部位露出
 	ELSEIF CHECK_CLO("ノーパン", ARG)
-		LOCALS = ノーパン
+		LOCALS = 不穿内裤
 	ENDIF
 ENDIF
 
 SIF STRLENS(LOCALS)
-	PRINTFORML 備考：%LOCALS%
+	PRINTFORML 备注：%LOCALS%
 
 ;3サイズ
 @NEW_PRINT_3SIZE, ARG, ARGS
