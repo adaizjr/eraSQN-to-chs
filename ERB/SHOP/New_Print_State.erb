@@ -2423,7 +2423,7 @@ SIF NEXT_LINE%3
 RETURN 0
 
 @NEW_PRINT_PUBICHAIR, ARG
-SIF CONFIG("陰毛と腋毛") == 0 || (TALENT:ARG:男性 && COND("男の娘", ARG) == 0)
+SIF (CONFIG("陰毛と腋毛") == 0) || (TALENT:ARG:男性 && (COND("男の娘", ARG) == 0))
 	RETURN 0
 IF CONFIG("腋毛")
 	LOCALS = □ 阴毛和%TEXTS("腋")%毛的状态 □
@@ -2438,24 +2438,24 @@ SIF CONFIG("項目：陰毛")
 IF COND("阴毛", ARG) == 0
 	PRINT  ----------
 ELSE
-	PRINTFORM \@ CONFIG("腋毛") ? 陰毛： # \@%CONDS("阴毛", ARG)%
-	IF CONDS("阴毛", ARG) == "お手入れ済" && CEVENTS("陰毛の名称", ARG) != ""
+	PRINTFORM \@ CONFIG("腋毛") ? 阴毛： # \@%CONDS("阴毛", ARG)%
+	IF (CONDS("阴毛", ARG) == "お手入れ済") && (CEVENTS("陰毛の名称", ARG) != "")
 		IF CEVENTS("陰毛の形", ARG) == "HEARTMARK"
 			PRINT (
 			CALL HEARTMARK
 			PRINTFORM  %CEVENTS("陰毛の名称", ARG)%)
 		ELSE
-			PRINTFORM (\@ STRLENS(CEVENTS("陰毛の形", ARG) ) ? %CEVENTS("陰毛の形", ARG)%%BL(1)% #  \@%CEVENTS("陰毛の名称", ARG)%)
+			PRINTFORM (\@ STRLENS(CEVENTS("陰毛の形", ARG)) ? %CEVENTS("陰毛の形", ARG)%%BL(1)% #  \@%CEVENTS("陰毛の名称", ARG)%)
 		ENDIF
 	ENDIF
 ENDIF
 SELECTCASE COND("身嗜み：陰毛", ARG)
 CASE 3
-	PRINTFORM 　　※ツルツルに剃る\@ ARG == MASTER ? 主義 # ようにお願い中 \@
+	PRINTFORM 　　※\@ ARG != MASTER ? 被要求 # \@剃得光溜溜\@ ARG == MASTER ? 主义 # \@
 CASE 5
-	PRINTFORM 　　※形を綺麗に保つ\@ ARG == MASTER ? 主義 # ようにお願い中 \@
+	PRINTFORM 　　※\@ ARG != MASTER ? 被要求 # \@剃成好看的形状\@ ARG == MASTER ? 主义 # \@
 CASE 7
-	PRINTFORM 　　※剃らない\@ ARG == MASTER ? 主義 # ようにお願い中 \@
+	PRINTFORM 　　※\@ ARG != MASTER ? 被要求 # \@不剃毛\@ ARG == MASTER ? 主义 # \@
 ENDSELECT
 PRINTL
 SIF CONFIG("腋毛") == 0
@@ -2464,9 +2464,9 @@ SIF CONFIG("腋毛") == 0
 PRINTFORM %TEXTS("腋")%毛：%CONDS("腋毛", ARG)%
 SELECTCASE COND("身嗜み：腋毛", ARG)
 CASE 3
-	PRINTFORM 　　※ツルツルに剃る\@ ARG == MASTER ? 主義 # ようにお願い中 \@
+	PRINTFORM 　　※\@ ARG != MASTER ? 被要求 # \@剃得光溜溜\@ ARG == MASTER ? 主义 # \@
 CASE 7
-	PRINTFORM 　　※剃らない\@ ARG == MASTER ? 主義 # ようにお願い中 \@
+	PRINTFORM 　　※\@ ARG != MASTER ? 被要求 # \@不剃毛\@ ARG == MASTER ? 主义 # \@
 ENDSELECT
 PRINTL
 
