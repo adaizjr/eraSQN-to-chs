@@ -106,6 +106,7 @@
 @SETFLAG|[所在文件](/ERB/TRAIN/Event_Setflag.erb#L5-L2958)|[说明文件](/Wiki/erasqn_wiki/function/s/setflag.md)|||
 @SHOP_EX|[所在文件]()|[说明文件](/Wiki/erasqn_wiki/function/s/shop_ex.md)|||
 @SHOW_CHARADATA|[所在文件]()|[说明文件](/Wiki/erasqn_wiki/function/s/show_charadata.md)|||
+@SHOW_FAMILY|[所在文件](/ERB/SHOP/New_Print_State.erb#L2215-L2321)|[说明文件](/Wiki/erasqn_wiki/function/s/show_family.md)|显示角色的家族构成|100%|
 @SHOW_ITEM_HAVE|[所在文件]()|[说明文件](/Wiki/erasqn_wiki/function/s/show_item_have.md)|||
 @SHOW_SHOP|[所在文件](/ERB/SHOP/Shop.erb#L137-L545)|[说明文件](/Wiki/erasqn_wiki/function/s/show_shop.md)|显示游戏主菜单<br/>Emuera引擎在读取存档后，自动调用此函数|95%|
 @START_CHARA_SELECT|[所在文件]()|[说明文件](/Wiki/erasqn_wiki/function/s/start_chara_select.md)|||
